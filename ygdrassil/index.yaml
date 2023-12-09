@@ -3,9 +3,9 @@ entries:
   aeneabot:
   - apiVersion: v2
     appVersion: 4.0.1
-    created: "2023-12-09T05:51:10.730734099+01:00"
+    created: "2023-12-09T06:44:12.929487933+01:00"
     description: Deployment of AeneaBot Telegram Bot
-    digest: 178ccb616856e732865bcc2c556815d5e9ed082fe7f658e41bfdf3045d94f8b6
+    digest: cfd4ca8da070a7317d11849147e29b560bd956deae66d22edf04a15d1bd5d584
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/aenea.png
     keywords:
@@ -23,4 +23,4 @@ entries:
     urls:
     - https://sergiofernandezcordero.github.io/ygdrassil/aeneabot-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-09T05:51:10.729982039+01:00"
+generated: "2023-12-09T06:44:12.928808763+01:00"
