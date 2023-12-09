@@ -1,12 +1,17 @@
 # Default values for prometheus.
+# Application name in the cluster
 appname: prometheus
-url: prometheus.proyectopqmc.com
+# URL in which will be served
+url: prometheus.example.com
+# Service type and port
 service:
   type: LoadBalancer
   port: 80
+# Middleware configuration for HTTPS redirection. Don't touch unless you know what you are doing
 middleware:
   scheme: https
   port: 443
+# Hardware reservation for deployment
 deployment:
   req:
     cpu: 200m

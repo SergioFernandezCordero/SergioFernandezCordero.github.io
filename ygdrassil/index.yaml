@@ -3,9 +3,9 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 2.48.0
-    created: "2023-12-09T02:00:14.938133546+01:00"
+    created: "2023-12-09T02:23:00.679117372+01:00"
     description: Deployment of Prometheus Service
-    digest: 5ab3a0e11a8f125e1e7524549698a953d986c5f77d173a175efb423997e7d12e
+    digest: 82c21473adf06f114785ff6323efd8b4ffdb9d62e9f599cc76ecd2a50c1f752b
     home: https://sergiofernandezcordero.github.io/ygdrassil
     keywords:
     - prometheus
@@ -15,9 +15,9 @@ entries:
       url: https://sergio.fernandezcordero.net
     name: prometheus
     sources:
-    - https://sergiofernandezcordero.github.io/helm
+    - https://sergiofernandezcordero.github.io/helm/prometheus
     type: application
     urls:
     - https://sergiofernandezcordero.github.io/ygdrassil/prometheus-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-09T02:00:14.937608159+01:00"
+generated: "2023-12-09T02:23:00.678603097+01:00"
