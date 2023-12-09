@@ -3,9 +3,10 @@ entries:
   aeneabot:
   - apiVersion: v2
     appVersion: 4.0.1
-    created: "2023-12-09T06:44:12.929487933+01:00"
-    description: Deployment of AeneaBot Telegram Bot
-    digest: cfd4ca8da070a7317d11849147e29b560bd956deae66d22edf04a15d1bd5d584
+    created: "2023-12-09T06:54:27.433783847+01:00"
+    description: AeneaBot is a Telegram Chat Bot which includes its own conversational
+      AI base in Ollama
+    digest: 236364be2444aee73df8cdd97f7455fd869efb888948f6f6e332e09499ac3ae6
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/aenea.png
     keywords:
@@ -23,4 +24,4 @@ entries:
     urls:
     - https://sergiofernandezcordero.github.io/ygdrassil/aeneabot-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-09T06:44:12.928808763+01:00"
+generated: "2023-12-09T06:54:27.433114671+01:00"

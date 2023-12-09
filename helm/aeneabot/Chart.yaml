@@ -1,7 +1,7 @@
 apiVersion: v2
 name: aeneabot
 version: 0.1.0
-description: Deployment of AeneaBot Telegram Bot
+description: AeneaBot is a Telegram Chat Bot which includes its own conversational AI base in Ollama
 type: application
 keywords:
   - aeneabot
