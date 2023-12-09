@@ -1,0 +1,18 @@
+apiVersion: v2
+name: aeneabot
+version: 0.1.0
+description: Deployment of AeneaBot Telegram Bot
+type: application
+keywords:
+  - aeneabot
+  - telegram
+  - python
+home: https://sergiofernandezcordero.github.io/ygdrassil
+sources:
+  - https://sergiofernandezcordero.github.io/helm/aeneabot
+icon: https://sergiofernandezcordero.github.io/ygdrassil/images/aenea.png
+maintainers:
+  - name: Sergio Fernández Cordero
+    email: sergio@fernandezcordero.net
+    url: https://sergio.fernandezcordero.net
+appVersion: 4.0.1

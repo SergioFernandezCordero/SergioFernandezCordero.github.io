@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Value.appname }}
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Value.appname }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Value.appname }}
+    spec:
+      securityContext:
+        runAsUser: {{ .Values.securityContext.runAsUser }}
+        runAsGroup: {{ .Values.securityContext.runAsGroup }}
+        fsGroup:  {{ .Values.securityContext.runAsUser }}
+      containers:
+        - name: aeneaai
+          image: elautoestopista/aeneaai:{{ .Values.ai.deployment.version }}
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: {{ .Values.ai.deployment.req.cpu }}
+              memory: {{ .Values.ai.deployment.req.mem }}
+            limits:
+              cpu: {{ .Values.ai.deployment.lim.cpu }}
+              memory: {{ .Values.ai.deployment.lim.mem }}
+        - name: aeneabot
+          image: elautoestopista/aeneabot:{{ .Values.bot.deployment.version }}
+          imagePullPolicy: Always
+          resources:
+            requests:
+              cpu: {{ .Values.bot.deployment.req.cpu }}
+              memory: {{ .Values.bot.deployment.req.mem }}
+            limits:
+              cpu: {{ .Values.bot.deployment.lim.cpu }}
+              memory: {{ .Values.bot.deployment.lim.mem }}
+          env:
+          - name: BOTNAME
+            value: {{ .Values.botName }}
+          - name: AUTHUSER
+            value: {{ .Values.authUser }}
+          - name: LANG
+            value: {{ .Values.lang }}
+          - name: LOGLEVEL
+            value: {{ .Values.logLevel }}
+          - name: AENEADB
+            value: {{ .Values.dbPath }}
+          - name: TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: aeneatoken
+                key: token
+          - name: OLLAMA_URL
+            value: {{ .Values.ollamaUrl }}
+          - name: OLLAMA_MODEL
+            value: {{ .Values.ollamaModel }}
+          volumeMounts:
+            - name: {{ .Value.appname }}-storage
+              mountPath: {{ .Values.dbPath }}
+      volumes:
+        - name: {{ .Value.appname }}-storage
+          persistentVolumeClaim:
+            claimName: {{ .Value.appname }}-pvc
