@@ -32,8 +32,6 @@ botName: AeneaBot
 authUser: Your_Telegram_User
 # Default languange to be used by APIs, when required
 lang: ES
-# Telegram API Token. In productive environments, use helm-secrets plugin
-telegramToken: Your_Telegram_Token
 # Log Level
 logLevel: INFO
 ## Database and Storage
