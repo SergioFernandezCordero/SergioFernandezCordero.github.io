@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Value.appname }}
+  name: {{ .Values.appname }}
 spec:
   selector:
     matchLabels:
-      app: {{ .Value.appname }}
+      app: {{ .Values.appname }}
   template:
     metadata:
       labels:
-        app: {{ .Value.appname }}
+        app: {{ .Values.appname }}
     spec:
       securityContext:
         runAsUser: {{ .Values.securityContext.runAsUser }}
@@ -17,7 +17,7 @@ spec:
         fsGroup:  {{ .Values.securityContext.runAsUser }}
       containers:
         - name: aeneaai
-          image: elautoestopista/aeneaai:{{ .Values.ai.deployment.version }}
+          image: elautoestopista/aeneaai:{{ .Values.ai.version }}
           imagePullPolicy: Always
           resources:
             requests:
@@ -27,7 +27,7 @@ spec:
               cpu: {{ .Values.ai.deployment.lim.cpu }}
               memory: {{ .Values.ai.deployment.lim.mem }}
         - name: aeneabot
-          image: elautoestopista/aeneabot:{{ .Values.bot.deployment.version }}
+          image: elautoestopista/aeneabot:{{ .Values.bot.version }}
           imagePullPolicy: Always
           resources:
             requests:
@@ -57,9 +57,9 @@ spec:
           - name: OLLAMA_MODEL
             value: {{ .Values.ollamaModel }}
           volumeMounts:
-            - name: {{ .Value.appname }}-storage
+            - name: {{ .Values.appname }}-storage
               mountPath: {{ .Values.dbPath }}
       volumes:
-        - name: {{ .Value.appname }}-storage
+        - name: {{ .Values.appname }}-storage
           persistentVolumeClaim:
-            claimName: {{ .Value.appname }}-pvc
+            claimName: {{ .Values.appname }}-pvc

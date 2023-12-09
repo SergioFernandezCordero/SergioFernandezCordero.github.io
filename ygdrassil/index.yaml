@@ -1,23 +1,26 @@
 apiVersion: v1
 entries:
-  prometheus:
+  aeneabot:
   - apiVersion: v2
-    appVersion: 2.48.0
-    created: "2023-12-09T02:23:00.679117372+01:00"
-    description: Deployment of Prometheus Service
-    digest: 82c21473adf06f114785ff6323efd8b4ffdb9d62e9f599cc76ecd2a50c1f752b
+    appVersion: 4.0.1
+    created: "2023-12-09T05:51:10.730734099+01:00"
+    description: Deployment of AeneaBot Telegram Bot
+    digest: 178ccb616856e732865bcc2c556815d5e9ed082fe7f658e41bfdf3045d94f8b6
     home: https://sergiofernandezcordero.github.io/ygdrassil
+    icon: https://sergiofernandezcordero.github.io/ygdrassil/images/aenea.png
     keywords:
-    - prometheus
+    - aeneabot
+    - telegram
+    - python
     maintainers:
     - email: sergio@fernandezcordero.net
       name: Sergio Fernández Cordero
       url: https://sergio.fernandezcordero.net
-    name: prometheus
+    name: aeneabot
     sources:
-    - https://sergiofernandezcordero.github.io/helm/prometheus
+    - https://sergiofernandezcordero.github.io/helm/aeneabot
     type: application
     urls:
-    - https://sergiofernandezcordero.github.io/ygdrassil/prometheus-0.1.0.tgz
+    - https://sergiofernandezcordero.github.io/ygdrassil/aeneabot-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-09T02:23:00.678603097+01:00"
+generated: "2023-12-09T05:51:10.729982039+01:00"

@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: {{ .Value.appname }}-pv
+  name: {{ .Values.appname }}-pv
 spec:
   accessModes:
     - ReadWriteOnce
   capacity:
     storage: 1Gi
   hostPath:
-    path: {{ .Value.localPersistentStoragePath }}
+    path: {{ .Values.localPersistentStoragePath }}
   storageClassName: local-storage
