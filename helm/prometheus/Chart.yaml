@@ -1,0 +1,15 @@
+apiVersion: v2
+name: prometheus
+version: 0.1.0
+description: Deployment of Prometheus Service
+type: application
+keywords:
+  - prometheus
+home: https://sergiofernandezcordero.github.io/ygdrassil
+sources:
+  - https://sergiofernandezcordero.github.io/helm
+maintainers: # (optional)
+  - name: Sergio Fernández Cordero
+    email: sergio@fernandezcordero.net
+    url: https://sergio.fernandezcordero.net
+appVersion: 2.48.0
