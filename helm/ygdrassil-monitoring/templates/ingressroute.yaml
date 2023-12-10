@@ -1,0 +1,114 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-prometheus-tls
+  namespace: monitoring
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`{{ .Values.prometheusUrl }}`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: prometheus-web-lb
+      port: {{ .Values.prometheusPort }}
+  tls:
+    certResolver: default
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-prometheus
+  namespace: monitoring
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/port:   '9090'
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`{{ .Values.prometheusUrl }}`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: prometheus-web-lb
+      port: {{ .Values.prometheusPort }}
+    middlewares:
+      - name: redirect-https
+        namespace: kube-system
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-alertmanager-tls
+  namespace: monitoring
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`{{ .Values.alertmanagerUrl }}`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: alertmanager-web-lb
+      port: {{ .Values.alertmanagerPort }}
+  tls:
+    certResolver: default
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-alertmanager
+  namespace: monitoring
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/port:   '9093'
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`{{ .Values.alertmanagerUrl }}`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: alertmanager-web-lb
+      port: {{ .Values.alertmanagerPort }}
+    middlewares:
+      - name: redirect-https
+        namespace: kube-system
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-grafana-tls
+  namespace: monitoring
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`{{ .Values.grafanaUrl }}`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: grafana-web-lb
+      port: {{ .Values.grafanaPort }}
+  tls:
+    certResolver: default
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-grafana
+  namespace: monitoring
+  annotations:
+    prometheus.io/scrape: 'true'
+    prometheus.io/port:   '3000'
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`{{ .Values.grafanaUrl }}`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: grafana-web-lb
+      port: {{ .Values.grafanaPort }}
+    middlewares:
+      - name: redirect-https
+        namespace: kube-system
