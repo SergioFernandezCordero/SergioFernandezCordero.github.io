@@ -11,14 +11,14 @@ spec:
       labels:
         app: {{ .Values.appname }}
     spec:
+      securityContext:
+        runAsUser: {{ .Values.securityContext.runAsUser }}
+        runAsGroup: {{ .Values.securityContext.runAsGroup }}
+        fsGroup: {{ .Values.securityContext.runAsUser }}
       containers:
         - name: raponchi
           image: elautoestopista/raponchi:{{ .Values.container.version }}
           imagePullPolicy: Always
-          securityContext:
-            runAsUser: {{ .Values.securityContext.runAsUser }}
-            runAsGroup: {{ .Values.securityContext.runAsGroup }}
-            fsGroup: {{ .Values.securityContext.runAsUser }}
           resources:
             requests:
               cpu: {{ .Values.container.deployment.req.cpu }}
