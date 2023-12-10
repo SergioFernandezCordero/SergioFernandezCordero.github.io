@@ -1,0 +1,23 @@
+apiVersion: v2
+name: ygdrassil-monitoring
+version: 0.1.0
+description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus, Alertmanager, kube-static-metrics, Grafana)
+type: application
+keywords:
+  - monitoring
+  - ygdrassil
+home: https://sergiofernandezcordero.github.io/ygdrassil
+sources:
+  - https://sergiofernandezcordero.github.io/helm/ygdrassil-monitoring
+dependencies:
+  - name: prometheus
+    version: "22.7.0"
+    repository: "https://prometheus-community.github.io/helm-charts"
+  - name: grafana
+    version: "7.0.11"
+    repository: "https://grafana.github.io/helm-charts"
+maintainers:
+  - name: Sergio Fernández Cordero
+    email: sergio@fernandezcordero.net
+    url: https://sergio.fernandezcordero.net
+appVersion: 4.0.1

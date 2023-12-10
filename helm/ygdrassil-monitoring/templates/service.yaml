@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometheus-web-lb
+  namespace: monitoring
+spec:
+  type: LoadBalancer
+  ports:
+  - port: {{ .Values.prometheusPort }}
+    targetPort: 80
+  selector:
+    app: prometheus-server
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: alertmanager-web-lb
+  namespace: monitoring
+spec:
+  type: LoadBalancer
+  ports:
+  - port: {{ .Values.alertmanagerPort }}
+    targetPort: 9093
+  selector:
+    app: alertmanager
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana-web-lb
+  namespace: monitoring
+spec:
+  type: LoadBalancer
+  ports:
+  - port: {{ .Values.grafanaPort }}
+    targetPort: 80
+  selector:
+    app: grafana

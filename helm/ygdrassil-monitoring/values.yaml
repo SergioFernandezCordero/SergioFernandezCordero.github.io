@@ -1,0 +1,18 @@
+# Default values for ygdrassil-monitoring.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+appName: ygdrassil-monitoring
+# Decide expose services using TLS or not
+serviceSchema: "http"
+## Prometheus
+prometheusUrl: prometheus.example.com
+# External port of the Service, will redirect to 443 HTTPS if serviceSchema is set to https
+prometheusPort: "80"
+## Alertmanager
+alertmanagerUrl: alertmanager.example.com
+# External port of the Service, will redirect to 443 HTTPS if serviceSchema is set to https
+alertmanagerPort: "80"
+## Grafana
+grafanaUrl: grafana.example.com
+# External port of the Service, will redirect to 443 HTTPS if serviceSchema is set to https
+grafanaPort: "80"

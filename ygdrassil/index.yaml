@@ -3,7 +3,7 @@ entries:
   aeneabot:
   - apiVersion: v2
     appVersion: 4.0.1
-    created: "2023-12-10T01:52:46.877468129+01:00"
+    created: "2023-12-10T15:41:10.644623715+01:00"
     description: AeneaBot is a Telegram Chat Bot which includes its own conversational
       AI base in Ollama
     digest: 236364be2444aee73df8cdd97f7455fd869efb888948f6f6e332e09499ac3ae6
@@ -27,7 +27,7 @@ entries:
   raponchi:
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-12-10T01:52:46.877841721+01:00"
+    created: "2023-12-10T15:41:10.645012514+01:00"
     description: Raponchi is a silly bot which posts in Twitter a photo of a frog
       with a random name. Why? Just for fun.
     digest: ea453ca793123d6b0f7c71b0a7ec1d26106567a265ed83d7f16d1f76d09b8501
@@ -50,4 +50,33 @@ entries:
     urls:
     - https://sergiofernandezcordero.github.io/ygdrassil/raponchi-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-10T01:52:46.876871598+01:00"
+  ygdrassil-monitoring:
+  - apiVersion: v2
+    appVersion: 4.0.1
+    created: "2023-12-10T15:41:10.657988209+01:00"
+    dependencies:
+    - name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 22.7.0
+    - name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 7.0.11
+    description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus,
+      Alertmanager, kube-static-metrics, Grafana)
+    digest: b87966db04579bf721adf549a698ae046f86fe0fa42219fb2010b64096901442
+    home: https://sergiofernandezcordero.github.io/ygdrassil
+    keywords:
+    - monitoring
+    - ygdrassil
+    maintainers:
+    - email: sergio@fernandezcordero.net
+      name: Sergio Fernández Cordero
+      url: https://sergio.fernandezcordero.net
+    name: ygdrassil-monitoring
+    sources:
+    - https://sergiofernandezcordero.github.io/helm/ygdrassil-monitoring
+    type: application
+    urls:
+    - https://sergiofernandezcordero.github.io/ygdrassil/ygdrassil-monitoring-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-12-10T15:41:10.644001442+01:00"

@@ -1,3 +1,4 @@
+{{ if eq .Values.serviceSchema "https" }}
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
@@ -5,6 +6,7 @@ metadata:
   namespace: kube-system
 spec:
   redirectScheme:
-    scheme: {{ .Values.middleware.scheme }}
+    scheme: https
     permanent: "true"
-    port: {{ .Values.middleware.port }}
+    port: 443
+{{ end }}
