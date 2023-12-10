@@ -3,7 +3,7 @@ entries:
   aeneabot:
   - apiVersion: v2
     appVersion: 4.0.1
-    created: "2023-12-10T01:48:47.169066937+01:00"
+    created: "2023-12-10T01:52:46.877468129+01:00"
     description: AeneaBot is a Telegram Chat Bot which includes its own conversational
       AI base in Ollama
     digest: 236364be2444aee73df8cdd97f7455fd869efb888948f6f6e332e09499ac3ae6
@@ -27,10 +27,10 @@ entries:
   raponchi:
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-12-10T01:48:47.169464798+01:00"
+    created: "2023-12-10T01:52:46.877841721+01:00"
     description: Raponchi is a silly bot which posts in Twitter a photo of a frog
       with a random name. Why? Just for fun.
-    digest: 3d4025e2aa44bf37e2a278e303b7a9873922fb6210d012589afaf9fb40c935af
+    digest: ea453ca793123d6b0f7c71b0a7ec1d26106567a265ed83d7f16d1f76d09b8501
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/raponchi.png
     keywords:
@@ -50,4 +50,4 @@ entries:
     urls:
     - https://sergiofernandezcordero.github.io/ygdrassil/raponchi-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-10T01:48:47.168457002+01:00"
+generated: "2023-12-10T01:52:46.876871598+01:00"

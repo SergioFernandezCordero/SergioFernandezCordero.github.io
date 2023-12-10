@@ -14,7 +14,7 @@ spec:
       securityContext:
         runAsUser: {{ .Values.securityContext.runAsUser }}
         runAsGroup: {{ .Values.securityContext.runAsGroup }}
-        fsGroup:  {{ .Values.securityContext.runAsUser }}
+        fsGroup: {{ .Values.securityContext.runAsUser }}
       containers:
         - name: aeneaai
           image: elautoestopista/aeneaai:{{ .Values.ai.version }}
