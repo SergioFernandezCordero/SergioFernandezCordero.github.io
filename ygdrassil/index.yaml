@@ -3,7 +3,7 @@ entries:
   aeneabot:
   - apiVersion: v2
     appVersion: 4.0.1
-    created: "2023-12-10T16:42:53.871999399+01:00"
+    created: "2023-12-10T16:47:10.21051199+01:00"
     description: AeneaBot is a Telegram Chat Bot which includes its own conversational
       AI base in Ollama
     digest: 236364be2444aee73df8cdd97f7455fd869efb888948f6f6e332e09499ac3ae6
@@ -27,7 +27,7 @@ entries:
   raponchi:
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-12-10T16:42:53.872826955+01:00"
+    created: "2023-12-10T16:47:10.21095058+01:00"
     description: Raponchi is a silly bot which posts in Twitter a photo of a frog
       with a random name. Why? Just for fun.
     digest: ea453ca793123d6b0f7c71b0a7ec1d26106567a265ed83d7f16d1f76d09b8501
@@ -53,7 +53,7 @@ entries:
   ygdrassil-monitoring:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-12-10T16:42:53.888040674+01:00"
+    created: "2023-12-10T16:47:10.22303813+01:00"
     dependencies:
     - name: prometheus
       repository: https://prometheus-community.github.io/helm-charts
@@ -63,7 +63,7 @@ entries:
       version: 6.49.0
     description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus,
       Alertmanager, kube-static-metrics, Grafana)
-    digest: fb2bfbc2c650b90bc9e6e935a2293c2f7943d78e516bce0a165d468614967b18
+    digest: 434f87174c0a51d3f9006cbccaee243ee3e598d46703b297810859125c22539d
     home: https://sergiofernandezcordero.github.io/ygdrassil
     keywords:
     - monitoring
@@ -79,4 +79,4 @@ entries:
     urls:
     - https://sergiofernandezcordero.github.io/ygdrassil/ygdrassil-monitoring-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-10T16:42:53.871001588+01:00"
+generated: "2023-12-10T16:47:10.209898273+01:00"
