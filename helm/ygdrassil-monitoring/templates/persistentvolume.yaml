@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ .Values.appName }}-prometheus-server
+spec:
+  accessModes:
+    - ReadWriteOnce
+  claimRef:
+    namespace: {{ .Release.Namespace }}
+    name: {{ .Values.appName }}-prometheus-server
+  capacity:
+    storage: {{ .Values.prometheus.volumeSize }}
+  hostPath:
+    path: {{ .Values.prometheus.volumePath }}
+  storageClassName: local-storage
