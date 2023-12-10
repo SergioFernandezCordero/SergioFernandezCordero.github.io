@@ -34,7 +34,7 @@ spec:
     - name: prometheus-web-lb
       port: {{ .Values.prometheusPort }}
     middlewares:
-      - name: {{ .Values.alertmanagerPort }}-redirect-https
+      - name: {{ .Values.appName }}-redirect-https
         namespace: kube-system
 ---
 apiVersion: traefik.containo.us/v1alpha1
@@ -72,7 +72,7 @@ spec:
     - name: alertmanager-web-lb
       port: {{ .Values.alertmanagerPort }}
     middlewares:
-      - name: {{ .Values.alertmanagerPort }}-redirect-https
+      - name: {{ .Values.appName }}-redirect-https
         namespace: kube-system
 ---
 apiVersion: traefik.containo.us/v1alpha1
@@ -110,5 +110,5 @@ spec:
     - name: grafana-web-lb
       port: {{ .Values.grafanaPort }}
     middlewares:
-      - name: {{ .Values.alertmanagerPort }}-redirect-https
+      - name: {{ .Values.appName }}-redirect-https
         namespace: kube-system
