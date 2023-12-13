@@ -19,11 +19,16 @@ jobs:
       - name: DEBUG show GPG keys
         run: gpg -K
 
-      - name: Download and install Helm 3 lastest
+      - name: Download and install Helm 3 latest
         run: curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
 #      - name: Lint Packages
 #        run: helm lint helm/*
+
+      - name: Add Helm repositories for Grafana
+        run: helm repo add grafana https://grafana.github.io/helm-charts
+      - name: Add Helm repository for Prometheus
+        run: helm repo add prometheus https://prometheus-community.github.io/helm-charts
 
       - name: Build dependencies for AeneaBot
         run: helm dependencies build helm/aeneabot
