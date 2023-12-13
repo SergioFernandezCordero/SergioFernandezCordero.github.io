@@ -46,6 +46,9 @@ jobs:
       - name: Package and Sign
         run: helm secrets package --sign --key "Ygdrassil Sergio's Package Helm Signing Key" helm/* --destination ygdrassil
 
+      - name: Publish packages in repo
+        run: helm repo index ygdrassil --url https://sergiofernandezcordero.github.io/ygdrassil
+
 #      - name: Create Pull Request
 #        uses: peter-evans/create-pull-request@v5
 #        with:
