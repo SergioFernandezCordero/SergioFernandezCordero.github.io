@@ -1,0 +1,44 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+apiVersion: v2
+appVersion: 4.0.1
+description: AeneaBot is a Telegram Chat Bot which includes its own conversational
+  AI base in Ollama
+home: https://sergiofernandezcordero.github.io/ygdrassil
+icon: https://sergiofernandezcordero.github.io/ygdrassil/images/aenea.png
+keywords:
+- - aeneabot
+- - telegram
+- - python
+maintainers:
+- - email: sergio@fernandezcordero.net
+  name: Sergio Fernández Cordero
+  url: https://sergio.fernandezcordero.net
+name: aeneabot
+sources:
+- - https://sergiofernandezcordero.github.io/helm/aeneabot
+- - https://github.com/SergioFernandezCordero/AeneaBot
+- - https://github.com/SergioFernandezCordero/AeneaAI
+type: application
+version: 0.1.0
+
+...
+files:
+  aeneabot-0.1.0.tgz: sha256:99af95b9614ecfdaeff9f7d532de6430d2cc5aab4176d01abab3d1bd50513152
+-----BEGIN PGP SIGNATURE-----
+
+wsFcBAEBCgAQBQJlejVmCRC6QjaDxELY9gAAQzcQADz31z7/jVOnC2z5C5HBXgkI
+oDrUETAMGwdInGMVhGDOpoCJr1xgLILTeq4aFTegAHsXFcGJkJlQkriGdgB2uEqC
+3RZlIgPsRbbHqdM4VjgZWRVKzk3SucwlyR6UlGSs1ledsmf1lc1pbcdDDaanu1YQ
+m2wEQ902XBidfcGt2ZlW0O3muv9HvkP7S/n8A/tqdH6PnfgMpafss/9XVw+sPxbq
+NYFDjXSKsw0VPS8m5+DWxNhO+p5hwBjkqc1JkZxal0U4Ufy+0erc67z/YUvTsgE0
+dx7Yp0EI7iXnSShdrTawAH9Wzk8540KeuM3tZXuVcSdSppoMx9hVxrpCzKroqUw9
+uSJWBL6hwzWoRU3Jx7dVRTFDPqigkSVRb7K4YYru0yqt18T+6paIoFcKTseTG2GY
+1UcVl1lbLo3fGsa10rtU/4gUvpTbT1Ki/imw6dukUacOVtBKrVoYdVNr58QtU7t5
+yLLQSscYSuxibezjMUIpR2tFKA8DnDPFjeAEZDwuCGilJjmXHEwZ52ySi/2ubcM3
+BH5mtLj37poQo88DnILEtRPSI44GK2E6pBmb6iofm5got84917QNOx++AYw0YIch
+7oJCZpJqApIVsP+5Ao/uB8U11DZ09/8rckS5gmn8iPkFVb+9cIqKuGevRcUz4AnK
+ax3e1r5Uoir/gC8nGnbD
+=TyRl
+-----END PGP SIGNATURE-----
