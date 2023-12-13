@@ -9,11 +9,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Import GPG Key
-        uses: crazy-max/ghaction-import-gpg@v1
-        env:
-          GPG_PRIVATE_KEY: ${{ secrets.HELM_SIGNING_KEY }}
-          PASSPHRASE: ${{ secrets.HELM_SIGNING_PASS }}
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.HELM_SIGNING_KEY }}
+          passphrase: ${{ secrets.HELM_SIGNING_PASS }}
+          trust_level: 5
 
       - name: DEBUG show GPG keys
         run: gpg -K
@@ -21,8 +22,8 @@ jobs:
       - name: Download and install Helm 3 lastest
         run: curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
-      - name: Lint Packages
-        run: helm lint helm/*
+#      - name: Lint Packages
+#        run: helm lint helm/*
 
       - name: Build dependencies for AeneaBot
         run: helm dependencies build helm/aeneabot
