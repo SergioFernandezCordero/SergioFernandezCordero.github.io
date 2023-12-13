@@ -6,6 +6,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Import GPG Key
         uses: crazy-max/ghaction-import-gpg@v1
         env:
@@ -14,9 +17,6 @@ jobs:
 
       - name: DEBUG show GPG keys
         run: gpg -K
-
-      - name: Checkout actual code
-        uses: actions/checkout@v2
 
       - name: Download and install Helm 3 lastest
         run: curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
