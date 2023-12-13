@@ -1,0 +1,44 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+apiVersion: v2
+appVersion: 0.1.4
+description: Raponchi is a silly bot which posts in Twitter a photo of a frog with
+  a random name. Why? Just for fun.
+home: https://sergiofernandezcordero.github.io/ygdrassil
+icon: https://sergiofernandezcordero.github.io/ygdrassil/images/raponchi.png
+keywords:
+- - raponchi
+- - twitter
+- - frogs
+- - python
+maintainers:
+- - email: sergio@fernandezcordero.net
+  name: Sergio Fernández Cordero
+  url: https://sergio.fernandezcordero.net
+name: raponchi
+sources:
+- - https://sergiofernandezcordero.github.io/helm/raponchi
+- - https://github.com/SergioFernandezCordero/raponchi
+type: application
+version: 0.1.0
+
+...
+files:
+  raponchi-0.1.0.tgz: sha256:2338161975a7a6924ce268f8243004ef31aac2aa790214aaf1c8d1f15a9a4bde
+-----BEGIN PGP SIGNATURE-----
+
+wsFcBAEBCgAQBQJlejTxCRC6QjaDxELY9gAAI4EQAFndTsd9Q7KVlbaHIFtKvPxX
+FNJMj2wXf83e9jIxxNuIGi/PwSn0orCxmpgoYKCKmC5Mw4whl2YX70W00yPx2aJr
+1oh0tyaPBiJfBNazu1I+Kjkf8lCTouVv0WnRj4m8Lq8gWQy9OOosBeOjcFpdzj8D
+th/u71CFvMIW+oWtKo617PR/hDoe0NhBU/2XQYma7/Gi+XosK+bG5naL4etelMIx
+3zsClqRxPAZNrz3iQQZ1TqeMLJxGdm5nexlEteG1EY0nT/6IG+0Oqvpya4bHJOM5
+mHJ9ac0kXDJPGpOupNTjzk+bOGHM27cv3o54GIRX4wgCHS96RAgIHMBADozkehqg
+sL8PHE46Cerb4pcHxvGvxs9Rzsp97nwbgaYwEuxJCXR+V8eZ10jbAJsxtPZfXVgt
+FJE/SO5uDi7AG8fwXS2MrfY4+xXUaYhIJb12P44CEViZJr74k5YZ7d2BuIdf2tLE
+UJTVa9kKXCjyv1BVHAnbE/v7hqGlYmNJqys9gZzFA0jjjcYzG7ehBMUtD3BZVP4l
+4IqgtR0Hd/jy7LBsxUeDhYEEgv8YS/U72U3nLoXjt0sP9Aq7w5DVfMazRpodXoM3
+iorzrclUiRMMcr36DpkHyDzTy5bXdoEH1I91E09kP7aZgctv7gdJZ80CAG4xHfxh
+n7dj6bF5WwvXnATwj+vW
+=XC+L
+-----END PGP SIGNATURE-----
