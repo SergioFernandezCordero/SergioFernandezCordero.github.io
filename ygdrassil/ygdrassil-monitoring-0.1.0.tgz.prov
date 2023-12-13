@@ -1,0 +1,47 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+apiVersion: v2
+appVersion: 0.1.0
+dependencies:
+- - name: prometheus
+  repository: https://prometheus-community.github.io/helm-charts
+  version: 22.7.0
+- - name: grafana
+  repository: https://grafana.github.io/helm-charts
+  version: 6.49.0
+description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus,
+  Alertmanager, kube-static-metrics, Grafana)
+home: https://sergiofernandezcordero.github.io/ygdrassil
+keywords:
+- - monitoring
+- - ygdrassil
+maintainers:
+- - email: sergio@fernandezcordero.net
+  name: Sergio Fernández Cordero
+  url: https://sergio.fernandezcordero.net
+name: ygdrassil-monitoring
+sources:
+- - https://sergiofernandezcordero.github.io/helm/ygdrassil-monitoring
+type: application
+version: 0.1.0
+
+...
+files:
+  ygdrassil-monitoring-0.1.0.tgz: sha256:aaba7daf4da5dc1eb293bb5e885db6c335d244786406cdb9a051a48f8803d52d
+-----BEGIN PGP SIGNATURE-----
+
+wsFcBAEBCgAQBQJlejVmCRC6QjaDxELY9gAAzJ4QAA0cTDSMBklJA0klsPBCRwEE
+hUBPtu0h+n6NTENcT8yxguN3VfjWElEC/AwdeQ4xfNYU9SkBEa1rWdLRwVuvoPo6
+0ZbFzYz7Uo3eLgl1Pu3c+961d2oKeQ+Us8o68XEs4uSZt30iQ/acsv8c+9Nyafyw
+VM/E3av4DPra3YQUJ/6xUYVduZtWRwd9yH5ZfuFJNVClYYuFgwmYaQrkQZbZXIoj
+4fblzetJLMCCkmQ20wODlQCkOrIY4TvKggoURdUWYKv5AOdafSmbbkCCD1HUxMFA
+Jd93FVCeqgV752paDO7ubVp3PZuF6H5RMVahxPCsiDj7Qob+UHkn8N58FBx8dDQ5
+vvOYLt07uHt+tq0sX6i1gGs37TY9k+NatR4HzsqgeeWn6z2D4bKk3d/JkiSOwhfp
+QzyBNPFUNVVZiV9uKlS/hDeQJSIKio5yZyjOxg6nexHfauz2Cc6J+NVxFzfzn3tp
+5AUkry2EbMmqbJjcgLu5IO54E2ClZ+7qdpmkFpes6MnfjJGXqLg8gLzUcSZVieXW
+ulnyTRBdZvKY2uPPXevCfGNmI+XQIR5NROQ82E3z7ZbOcpIzeqm3P18+ev9ocAPX
+DPHOYvK1CB5kn/8R7MjnC4Qexn8MTxtql+f94q8xPJUo8TGgZhB4WpvajQ8FjiZ7
+HG8Y+CQ+6+U0UfjbfEK1
+=y4Mi
+-----END PGP SIGNATURE-----

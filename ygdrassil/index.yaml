@@ -3,10 +3,10 @@ entries:
   aeneabot:
   - apiVersion: v2
     appVersion: 4.0.1
-    created: "2023-12-10T17:10:32.10399308+01:00"
+    created: "2023-12-13T22:51:18.354689575Z"
     description: AeneaBot is a Telegram Chat Bot which includes its own conversational
       AI base in Ollama
-    digest: 236364be2444aee73df8cdd97f7455fd869efb888948f6f6e332e09499ac3ae6
+    digest: 99af95b9614ecfdaeff9f7d532de6430d2cc5aab4176d01abab3d1bd50513152
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/aenea.png
     keywords:
@@ -20,6 +20,8 @@ entries:
     name: aeneabot
     sources:
     - https://sergiofernandezcordero.github.io/helm/aeneabot
+    - https://github.com/SergioFernandezCordero/AeneaBot
+    - https://github.com/SergioFernandezCordero/AeneaAI
     type: application
     urls:
     - https://sergiofernandezcordero.github.io/ygdrassil/aeneabot-0.1.0.tgz
@@ -27,10 +29,10 @@ entries:
   raponchi:
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-12-10T17:10:32.104650637+01:00"
+    created: "2023-12-13T22:51:18.35498857Z"
     description: Raponchi is a silly bot which posts in Twitter a photo of a frog
       with a random name. Why? Just for fun.
-    digest: ea453ca793123d6b0f7c71b0a7ec1d26106567a265ed83d7f16d1f76d09b8501
+    digest: 66feedbc6a39fb159e19944139a411ebfd1b80034ee465f961233eb7d7054aec
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/raponchi.png
     keywords:
@@ -53,7 +55,7 @@ entries:
   ygdrassil-monitoring:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-12-10T17:10:32.116317347+01:00"
+    created: "2023-12-13T22:51:18.364009726Z"
     dependencies:
     - name: prometheus
       repository: https://prometheus-community.github.io/helm-charts
@@ -63,7 +65,7 @@ entries:
       version: 6.49.0
     description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus,
       Alertmanager, kube-static-metrics, Grafana)
-    digest: dc95b5f7e7aca455a1020c4379a5d594de3ad0ead06249653f3d217ec9e72d05
+    digest: aaba7daf4da5dc1eb293bb5e885db6c335d244786406cdb9a051a48f8803d52d
     home: https://sergiofernandezcordero.github.io/ygdrassil
     keywords:
     - monitoring
@@ -79,4 +81,4 @@ entries:
     urls:
     - https://sergiofernandezcordero.github.io/ygdrassil/ygdrassil-monitoring-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-10T17:10:32.102696907+01:00"
+generated: "2023-12-13T22:51:18.354227216Z"
