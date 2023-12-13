@@ -37,8 +37,8 @@ jobs:
       - name: Build dependencies for Ygdrassil-monitoring
         run: helm dependencies build helm/ygdrassil-monitoring
 
-#      - name: Package and Sign
-#        run: echo $PASSPHRASE | helm secrets package --sign --key "Ygdrassil Sergio's Package Helm Signing Key" --keyring $GPG_PRIVATE_KEY --passphrase-file "-" helm/* --destination ygdrassil
+      - name: Package and Sign
+        run: helm secrets package --sign helm/* --destination ygdrassil
 
 #      - name: Create Pull Request
 #        uses: peter-evans/create-pull-request@v5
