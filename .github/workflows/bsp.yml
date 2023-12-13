@@ -16,11 +16,17 @@ jobs:
           passphrase: ${{ secrets.HELM_SIGNING_PASS }}
           trust_level: 5
 
-      - name: DEBUG show GPG keys
-        run: gpg -K
+      - name: Show imported GPG keys
+        run: gpg --list-secret-keys
+
+      - name: Export GPG file to a format understandable by Helm
+        run: gpg --always-trust --export-secret-keys > /home/runner/.gnupg/pubring.gpg
 
       - name: Download and install Helm 3 latest
         run: curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+      - name: Install Helm Secrets Plugin
+        run: helm plugin install https://github.com/jkroepke/helm-secrets --version v4.5.1
 
 #      - name: Lint Packages
 #        run: helm lint helm/*
@@ -38,7 +44,7 @@ jobs:
         run: helm dependencies build helm/ygdrassil-monitoring
 
       - name: Package and Sign
-        run: helm secrets package --sign helm/* --destination ygdrassil
+        run: helm secrets package --sign --key "Ygdrassil Sergio's Package Helm Signing Key" helm/* --destination ygdrassil
 
 #      - name: Create Pull Request
 #        uses: peter-evans/create-pull-request@v5
