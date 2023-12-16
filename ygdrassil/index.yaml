@@ -3,10 +3,10 @@ entries:
   aeneabot:
   - apiVersion: v2
     appVersion: 4.0.1
-    created: "2023-12-16T21:36:39.760044183Z"
+    created: "2023-12-16T21:59:42.436904352Z"
     description: AeneaBot is a Telegram Chat Bot which includes its own conversational
       AI base in Ollama
-    digest: 31ea9252cd5f3b4c1729ee72ed39d6c443f03be22d582d2f0a66174c245d648e
+    digest: 979580c4654c23ffc0a404eeff62c61303b7cf8bd4e2fb368e23147c108c2038
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/aenea.png
     keywords:
@@ -29,10 +29,10 @@ entries:
   raponchi:
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-12-16T21:36:39.76033941Z"
+    created: "2023-12-16T21:59:42.437201258Z"
     description: Raponchi is a silly bot which posts in Twitter a photo of a frog
       with a random name. Why? Just for fun.
-    digest: 0cfdc15d61935d8a91075afe4cdd3fa88281f16e4bf35684da27e0f0c9432318
+    digest: 38b7ef7bc7b8ffefcc6ed51839aad74b3cf5b3f5bb1e92f225c08d5d5c307014
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/raponchi.png
     keywords:
@@ -55,7 +55,7 @@ entries:
   ygdrassil-monitoring:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-12-16T21:36:39.768377092Z"
+    created: "2023-12-16T21:59:42.445420992Z"
     dependencies:
     - name: prometheus
       repository: https://prometheus-community.github.io/helm-charts
@@ -65,7 +65,7 @@ entries:
       version: 6.49.0
     description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus,
       Alertmanager, kube-static-metrics, Grafana)
-    digest: 0a3adb3255494af85380eec703d6a06340bf4eeb7ba3352661eefd34d0b651ba
+    digest: 9c59d25fe638145efe421510d3a109a8d246a6d3677b0d14f7080ab1e2c4767f
     home: https://sergiofernandezcordero.github.io/ygdrassil
     keywords:
     - monitoring
@@ -81,4 +81,4 @@ entries:
     urls:
     - https://sergiofernandezcordero.github.io/ygdrassil/ygdrassil-monitoring-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-16T21:36:39.759624874Z"
+generated: "2023-12-16T21:59:42.436436387Z"
