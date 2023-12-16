@@ -48,5 +48,4 @@ jobs:
         run: helm template helm/raponchi | kubeconform -strict -verbose
 
       - name: Run Kubeconform for Ygdrassil-Monitoring
-        run: helm template helm/ygdrassil-monitoring | kubeconform -strict -verbose -skip IngressRoute # Because Traefik IngressRoutes are considered as CRDs
-
+        run: helm template helm/ygdrassil-monitoring | kubeconform -strict -verbose -schema-location default -schema-location 'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/traefik.io/ingressroute_v1alpha1.json'
