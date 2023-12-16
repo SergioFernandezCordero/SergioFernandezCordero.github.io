@@ -1,6 +1,9 @@
 # Default values for ygdrassil-monitoring.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+## Please note these are specific configurations for ygdrassil-monitoring package.
+## You can use the values in all the dependencies charts.
+## See https://artifacthub.io/packages/helm/prometheus-community/prometheus for more info
 appName: ygdrassil-monitoring
 # Decide expose services using TLS or not
 serviceSchema: "http"
