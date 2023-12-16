@@ -15,6 +15,11 @@ jobs:
       - name: Download and install Helm 3 latest
         run: curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
+      - name: Install and configure Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: 'stable'
+
       - name: Install Kubeconform
         run: go install github.com/yannh/kubeconform/cmd/kubeconform@latest
 
