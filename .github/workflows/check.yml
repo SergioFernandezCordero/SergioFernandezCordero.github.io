@@ -15,6 +15,11 @@ jobs:
       - name: Download and install Helm 3 latest
         run: curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
+      - name: Install and configure Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: 'stable'
+
       - name: Install Kubeconform
         run: go install github.com/yannh/kubeconform/cmd/kubeconform@latest
 
@@ -43,4 +48,4 @@ jobs:
         run: helm template helm/raponchi | kubeconform -strict -verbose
 
       - name: Run Kubeconform for Ygdrassil-Monitoring
-        run: helm template helm/ygdrassil-monitoring | kubeconform -strict -verbose
+        run: helm template helm/ygdrassil-monitoring | kubeconform -strict -verbose -schema-location default -schema-location 'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/traefik.io/ingressroute_v1alpha1.json'
