@@ -13,6 +13,7 @@ dependencies:
 description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus,
   Alertmanager, kube-static-metrics, Grafana)
 home: https://sergiofernandezcordero.github.io/ygdrassil
+icon: https://sergiofernandezcordero.github.io/ygdrassil/images/ygdrassil.png
 keywords:
 - - monitoring
 - - ygdrassil
@@ -28,20 +29,20 @@ version: 0.1.0
 
 ...
 files:
-  ygdrassil-monitoring-0.1.0.tgz: sha256:0a3adb3255494af85380eec703d6a06340bf4eeb7ba3352661eefd34d0b651ba
+  ygdrassil-monitoring-0.1.0.tgz: sha256:fee24822bcbab0c334d3f5cf0bc7bd5a4b740b06a92b44aabef7408412733339
 -----BEGIN PGP SIGNATURE-----
 
-wsFcBAEBCgAQBQJlfhhnCRC6QjaDxELY9gAAkukQAG8/qDUjaax2wEmAlg9PKeFr
-zQRxsOaHHpvcsFl8Rtbby2wY36yuXt8DrsYxluFmZe2bUxNcDtJDSO4GtU+5I/2q
-87d3aDkABt86qrotSJBW1KF+tOpbxhFxmimqN44hJuJdY9ayK2wVg7s8JRygYJpT
-vGxNN9KkSjvMv+n8Obf8aniGxcW37ZTmDQxzqUAL6+dOFYuIrJweZoFsEsdeO2lh
-4ygyGxHii0BXbXYFP1+weCUutNZRTi3KJX91rOj6gooDOwoLT8vH3xJ5iUgVfpBN
-J1ULv8qzKvddhABgZu6U9OrxIJk2qaOHgCWiIlY++5Avbrcdjfl/QjZMhlbB8GJj
-2GnlmqMYMNRCAqd7umpkuIoHGkJHsabbyVsOwE41ZY4Ld5nA4J1rJx+hgah7AJpk
-eG2NOxzzxX5G8pKz7o+Ce21FRiqI/+9JsawTdSwEkddA2Ohx/nEMic/1F0BFMFVs
-HJISHsXLTxXEeBZovqMdNHZ6NvXnAHkUf8ITdFlf1T4mLeBJ/Z8zATxMGqdfmbvi
-9+B1NVSQhjMFSmIFelX7d5nTtMxzQMynHB5K/M+O+wxoCFC2BT1qR5158kF2eOtV
-e4Oj6cmJGJKa2Q2Pmo6mZrMro3ioMEAKYo6VBrJViWN/IR35KdJ2UPn/mt7iFDtS
-Aq1YxfpUSIMygyN3mHGn
-=I24g
+wsFcBAEBCgAQBQJlfilZCRC6QjaDxELY9gAAwewQADHZIKhsyRu2btGnj+PyukUV
+Cod78VEpXmnv6pcUbQoaofQDn0a1O9gHaPYe1KU13PyyoHjClTIlTxGn6QjjSLHe
+ECkiAJr0w2RqMeTNc9QmqCxd17WT9k2QqgQnjFLvBRWW2JQENcTKq8lJF7CmDjL7
+1Qu4vre1/kukpyHteci8N5tPzk4PGxiCiUR0uDq+SSOecl18gLlJaWDaPbeUMqQa
+62pE+xJb4f1MEWXKdaV/dr25rTgTSLE6xvJ+czGyre3ML8edYdK6TUvAnsLBEfYs
+e6YbFlW7rFMZrLvFllSoCdIydHR4KEiprb4vm7B1w589zg0aaPUNw4xnvYkOc7NM
+oP2AZ7Fg0OkSxYHxl1IccVXHrXTAq9/aVrRT8sKAdvHtK8DFiuQyzMkHUIWUh+3A
+h21UgAeGTcyasZm7KqjQ299qbXndsO/PlMYU2cNfNwVoFKCSOuFRTLueVQZ+2bMr
+0HxHESq2+TYjOdkxxjdW+aAOoZX6P7M/AcSYlNL9EJuTd0ZyFJuY2h29g/fXsdoR
+q5r0I1E0yid9diGWfkiJB6qPYFoiOfBYzp8RG4MtGv+SyKe8Br9PoMmPMx8/cfoQ
+dYpn/FggS3sEWxifs4AnpKiFeAmW2xYlQW72TBFQNftadDf99tABSr1LjnOrdUKO
+nSV04OTS/hCJy5E6oWiS
+=BmlC
 -----END PGP SIGNATURE-----
