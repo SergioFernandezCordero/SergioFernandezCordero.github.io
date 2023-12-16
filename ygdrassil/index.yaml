@@ -3,10 +3,10 @@ entries:
   aeneabot:
   - apiVersion: v2
     appVersion: 4.0.1
-    created: "2023-12-16T22:48:57.517462955Z"
+    created: "2023-12-16T23:18:14.21853402Z"
     description: AeneaBot is a Telegram Chat Bot which includes its own conversational
       AI base in Ollama
-    digest: 76200dbcf3bb083231919b17355d00018c1d20d585a51e68bed3a2054eec7b5f
+    digest: 035530ae9457256ab6dc1bda306985389798efb7e0452e3c3f44999339a62cc9
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/aenea.png
     keywords:
@@ -29,10 +29,10 @@ entries:
   raponchi:
   - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-12-16T22:48:57.517786792Z"
+    created: "2023-12-16T23:18:14.218855909Z"
     description: Raponchi is a silly bot which posts in Twitter a photo of a frog
       with a random name. Why? Just for fun.
-    digest: 43c1a7098c4eec7ce5f0e4c6ea29d3a1d57aecd97602117551203619fc387596
+    digest: 0fa06b5f50ccfddcc00303274221f1745e4fc838c7b843ef1761b22b957e531d
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/raponchi.png
     keywords:
@@ -55,7 +55,7 @@ entries:
   ygdrassil-monitoring:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-12-16T22:48:57.529683764Z"
+    created: "2023-12-16T23:18:14.22717828Z"
     dependencies:
     - name: prometheus
       repository: https://prometheus-community.github.io/helm-charts
@@ -65,7 +65,7 @@ entries:
       version: 6.49.0
     description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus,
       Alertmanager, kube-static-metrics, Grafana)
-    digest: fee24822bcbab0c334d3f5cf0bc7bd5a4b740b06a92b44aabef7408412733339
+    digest: 0ec73f41cc38eec5e2036252ce770d076569556428c958512bdddd22727144e0
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/ygdrassil.png
     keywords:
@@ -82,4 +82,4 @@ entries:
     urls:
     - https://sergiofernandezcordero.github.io/ygdrassil/ygdrassil-monitoring-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-16T22:48:57.516977123Z"
+generated: "2023-12-16T23:18:14.218063645Z"
