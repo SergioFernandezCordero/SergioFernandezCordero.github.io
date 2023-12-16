@@ -3,7 +3,7 @@ name: Helm Charts testing (Lint and compliance)
 on: pull_request
 
 jobs:
-  Test and Compliance:
+  Test_and_Compliance:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
