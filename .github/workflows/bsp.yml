@@ -1,0 +1,62 @@
+name: Build, Package and Sign Helm packages in repository
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.HELM_SIGNING_KEY }}
+          passphrase: ${{ secrets.HELM_SIGNING_PASS }}
+          trust_level: 5
+
+      - name: Show imported GPG keys
+        run: gpg --list-secret-keys
+
+      - name: Export GPG file to a format understandable by Helm
+        run: gpg --always-trust --export-secret-keys > /home/runner/.gnupg/pubring.gpg
+
+      - name: Download and install Helm 3 latest
+        run: curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+      - name: Install Helm Secrets Plugin
+        run: helm plugin install https://github.com/jkroepke/helm-secrets --version v4.5.1
+
+      - name: Lint Packages
+        run: helm lint helm/*
+
+      - name: Add Helm repositories for Grafana
+        run: helm repo add grafana https://grafana.github.io/helm-charts
+      - name: Add Helm repository for Prometheus
+        run: helm repo add prometheus https://prometheus-community.github.io/helm-charts
+
+      - name: Build dependencies for AeneaBot
+        run: helm dependencies build helm/aeneabot
+      - name: Build dependencies for Raponchi
+        run: helm dependencies build helm/raponchi
+      - name: Build dependencies for Ygdrassil-monitoring
+        run: helm dependencies build helm/ygdrassil-monitoring
+
+      - name: Package and Sign
+        run: helm secrets package --sign --key "Ygdrassil Sergio's Package Helm Signing Key" helm/* --destination ygdrassil
+
+      - name: Publish packages in repo
+        run: helm repo index ygdrassil --url https://sergiofernandezcordero.github.io/ygdrassil
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: Publish latest build
+          title: '[Publish] Publish latest build'
+          body: >
+            Automatically created PR for new Publish build
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: gh-pages
+          branch: release/build
+          delete-branch: true
