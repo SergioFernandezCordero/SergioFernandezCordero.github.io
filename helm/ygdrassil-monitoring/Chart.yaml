@@ -16,6 +16,7 @@ dependencies:
   - name: grafana
     version: "6.49.0"
     repository: "https://grafana.github.io/helm-charts"
+icon: https://sergiofernandezcordero.github.io/ygdrassil/images/ygdrassil.png
 maintainers:
   - name: Sergio Fernández Cordero
     email: sergio@fernandezcordero.net
