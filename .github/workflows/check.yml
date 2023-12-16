@@ -1,7 +1,6 @@
 name: Helm Charts testing (Lint and compliance)
 
-on:
-  pull_request: opened
+on: pull_request
 
 jobs:
   build:
