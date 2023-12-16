@@ -30,3 +30,8 @@ frogSchedulerNow: True
 frogNamesURL: https://raw.githubusercontent.com/olea/lemarios/master/nombres-propios-es.txt
 # Temporary path where frog images will be stored.
 frogPath: dataset
+# Twitter API credentials. In productive environments, consider using helm-secrets plugin
+twitterConsumerKey: Your_Consumer_Key
+twitterConsumerSecret: Your_Consumer_Secret
+twitterAccessToken: Your_Access_Token
+twitterAccessSecret: Your_Access_Secret
