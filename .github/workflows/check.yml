@@ -1,9 +1,7 @@
 name: Helm Charts testing (Lint and compliance)
 
-#on:
-#  pull_request: opened
-
-on: workflow_dispatch
+on:
+  pull_request: opened
 
 jobs:
   build:
