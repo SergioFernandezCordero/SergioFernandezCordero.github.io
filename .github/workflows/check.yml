@@ -1,0 +1,46 @@
+name: Helm Charts testing (Lint and compliance)
+
+#on:
+#  pull_request: opened
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Download and install Helm 3 latest
+        run: curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
+
+      - name: Install Kubeconform
+        run: go install github.com/yannh/kubeconform/cmd/kubeconform@latest
+
+      - name: Add Helm repositories for Grafana
+        run: helm repo add grafana https://grafana.github.io/helm-charts
+
+      - name: Add Helm repository for Prometheus
+        run: helm repo add prometheus https://prometheus-community.github.io/helm-charts
+
+      - name: Build dependencies for AeneaBot
+        run: helm dependencies build helm/aeneabot
+
+      - name: Build dependencies for Raponchi
+        run: helm dependencies build helm/raponchi
+
+      - name: Build dependencies for Ygdrassil-monitoring
+        run: helm dependencies build helm/ygdrassil-monitoring
+
+      - name: Lint Packages
+        run: helm lint helm/*
+
+      - name: Run Kubeconform for Aeneabot
+        run: helm template helm/aeneabot | kubeconform -strict -verbose
+
+      - name: Run Kubeconform for Raponchi
+        run: helm template helm/raponchi | kubeconform -strict -verbose
+
+      - name: Run Kubeconform for Ygdrassil-Monitoring
+        run: helm template helm/ygdrassil-monitoring | kubeconform -strict -verbose
