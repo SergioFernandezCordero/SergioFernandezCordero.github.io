@@ -48,4 +48,5 @@ jobs:
         run: helm template helm/raponchi | kubeconform -strict -verbose
 
       - name: Run Kubeconform for Ygdrassil-Monitoring
-        run: helm template helm/ygdrassil-monitoring | kubeconform -strict -verbose
+        run: helm template helm/ygdrassil-monitoring | kubeconform -strict -verbose -skip IngressRoute # Because Traefik IngressRoutes are considered as CRDs
+
