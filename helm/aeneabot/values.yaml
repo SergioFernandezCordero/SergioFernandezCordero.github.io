@@ -1,6 +1,8 @@
 ## Default values for aeneabot.
 ## Deployment
 appname: aeneabot
+# Telegram API Token. In productive environments, consider using helm-secrets plugin
+telegramToken: Your_Telegram_Token
 # Resources allocation for Aenea AI container
 ai:
   version: latest
