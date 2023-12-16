@@ -8,6 +8,8 @@ spec:
   ports:
   - port: {{ .Values.prometheusPort }}
     targetPort: 9090
+  selector:
+    app.kubernetes.io/name: prometheus
 ---
 apiVersion: v1
 kind: Service
@@ -19,6 +21,8 @@ spec:
   ports:
   - port: {{ .Values.alertmanagerPort }}
     targetPort: 9093
+  selector:
+    app.kubernetes.io/name: alertmanager
 ---
 apiVersion: v1
 kind: Service
@@ -30,3 +34,5 @@ spec:
   ports:
   - port: {{ .Values.grafanaPort }}
     targetPort: 3000
+  selector:
+    app.kubernetes.io/name: grafana
