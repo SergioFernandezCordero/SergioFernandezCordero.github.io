@@ -29,6 +29,10 @@ spec:
         - name: aeneabot
           image: elautoestopista/aeneabot:{{ .Values.bot.version }}
           imagePullPolicy: Always
+          {{ if .Values.prometheusEnabled }}
+          ports:
+            - containerPort: {{ .Values.prometheusPort }}
+          {{ end }}
           resources:
             requests:
               cpu: {{ .Values.bot.deployment.req.cpu }}
@@ -56,6 +60,10 @@ spec:
             value: {{ .Values.ollamaUrl }}
           - name: OLLAMA_MODEL
             value: {{ .Values.ollamaModel }}
+          - name: PROMETHEUS_ENABLE
+            value: {{ .Values.prometheusEnabled | quote }}
+          - name: PROMETHEUS_PORT
+            value: {{ .Values.prometheusPort | quote }}
           volumeMounts:
             - name: {{ .Values.appname }}-storage
               mountPath: {{ .Values.dbPath }}
