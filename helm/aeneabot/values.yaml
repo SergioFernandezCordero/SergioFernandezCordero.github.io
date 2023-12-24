@@ -46,3 +46,7 @@ localPersistentStoragePath: /mnt/aeneadb
 ollamaUrl: http://localhost:11434
 # Ollama Model user in the server. By default the one included with AeneaAI
 ollamaModel: aeneabot
+# Prometheus Metrics Enabled
+prometheusEnabled: False
+# Prometheus Exporter port
+prometheusPort: 8000
