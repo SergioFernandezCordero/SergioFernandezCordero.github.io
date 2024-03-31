@@ -3,10 +3,10 @@ entries:
   aeneabot:
   - apiVersion: v2
     appVersion: 4.0.1
-    created: "2023-12-24T01:48:00.352599419Z"
+    created: "2024-03-31T12:26:58.632228005Z"
     description: AeneaBot is a Telegram Chat Bot which includes its own conversational
       AI base in Ollama
-    digest: f0aec6111a8d331a46320f4959f9a4a38d05578bacd0315fb57aaad10a69856b
+    digest: 083119c4be08e2ccc4059328af248ae60ed5f3a1824461619975b15fe05f6cf5
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/aenea.png
     keywords:
@@ -28,8 +28,33 @@ entries:
     version: 0.1.0
   raponchi:
   - apiVersion: v2
+    appVersion: 0.1.5
+    created: "2024-03-31T12:26:58.632898759Z"
+    description: Raponchi is a silly bot which posts in Twitter a photo of a frog
+      with a random name. Why? Just for fun.
+    digest: 9c951f88b8700f052c76a118365f39123fff0167a1090efdf54e2c95772ac7e6
+    home: https://sergiofernandezcordero.github.io/ygdrassil
+    icon: https://sergiofernandezcordero.github.io/ygdrassil/images/raponchi.png
+    keywords:
+    - raponchi
+    - twitter
+    - frogs
+    - python
+    maintainers:
+    - email: sergio@fernandezcordero.net
+      name: Sergio Fernández Cordero
+      url: https://sergio.fernandezcordero.net
+    name: raponchi
+    sources:
+    - https://sergiofernandezcordero.github.io/helm/raponchi
+    - https://github.com/SergioFernandezCordero/raponchi
+    type: application
+    urls:
+    - https://sergiofernandezcordero.github.io/ygdrassil/raponchi-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     appVersion: 0.1.4
-    created: "2023-12-24T01:48:00.352962465Z"
+    created: "2024-03-31T12:26:58.632555127Z"
     description: Raponchi is a silly bot which posts in Twitter a photo of a frog
       with a random name. Why? Just for fun.
     digest: d4e8e1b2dd095e011e18ee55c2e43d08cfaf45536f758790f14fb208155218b5
@@ -55,7 +80,7 @@ entries:
   ygdrassil-monitoring:
   - apiVersion: v2
     appVersion: 0.1.0
-    created: "2023-12-24T01:48:00.360453281Z"
+    created: "2024-03-31T12:26:58.641050169Z"
     dependencies:
     - name: prometheus
       repository: https://prometheus-community.github.io/helm-charts
@@ -65,7 +90,7 @@ entries:
       version: 6.49.0
     description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus,
       Alertmanager, kube-static-metrics, Grafana)
-    digest: 16cf9745a6c4c3c6d94703394258abf9f8408882aa8da20a6936c2d9eda601fb
+    digest: c1d6704da22eb601f27b07866e9c1b1d36e8f32561dc8c66baeee2f1fea33bff
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/ygdrassil.png
     keywords:
@@ -82,4 +107,4 @@ entries:
     urls:
     - https://sergiofernandezcordero.github.io/ygdrassil/ygdrassil-monitoring-0.1.0.tgz
     version: 0.1.0
-generated: "2023-12-24T01:48:00.352097075Z"
+generated: "2024-03-31T12:26:58.631767464Z"
