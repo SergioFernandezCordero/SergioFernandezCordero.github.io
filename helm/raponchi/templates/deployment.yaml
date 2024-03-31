@@ -29,6 +29,8 @@ spec:
           env:
           - name: TIMEZONE
             value: {{ .Values.timeZone | quote}}
+          - name: FROGWORD
+            value: {{ .Values.frogWord | quote }}
           - name: FROG_NUMBER
             value: {{ .Values.frogNumber | quote }}
           - name: FROG_SCHEDULER_INTERVAL
