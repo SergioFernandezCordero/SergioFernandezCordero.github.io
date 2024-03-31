@@ -12,6 +12,7 @@ You need the following envvars as specified:
 
 - TIMEZONE: Timezone. Defaults to system timezone
 - LOGLEVEL: Log level. Defaults to INFO
+- FROGWORD: Keyword to be used. Defaults to "rana"
 - PATH_TO_FROGS: Temporary path where frog images will be stored. Defaults to "dataset"
 - FROG_NUMBER: Number of frog images downloaded in each batch. Defaults to 5
 - FROG_SCHEDULER_INTERVAL: How frequently the scheduler will poll for pending jobs. Defaults to 30 seconds
