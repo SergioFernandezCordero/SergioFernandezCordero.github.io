@@ -36,3 +36,16 @@ spec:
     targetPort: 3000
   selector:
     app.kubernetes.io/name: grafana
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: opensearch-dashboards-web-lb
+  namespace: monitoring
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 5601
+  selector:
+    app: opensearch-dashboards
