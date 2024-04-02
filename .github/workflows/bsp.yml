@@ -38,6 +38,8 @@ jobs:
         run: helm repo add grafana https://grafana.github.io/helm-charts
       - name: Add Helm repository for Prometheus
         run: helm repo add prometheus https://prometheus-community.github.io/helm-charts
+      - name: Add Opensearch repository for OpenSearch
+        run: helm repo add opensearch-project-helm-charts https://opensearch-project.github.io/helm-charts
 
       - name: Build dependencies for AeneaBot
         run: helm dependencies build helm/aeneabot

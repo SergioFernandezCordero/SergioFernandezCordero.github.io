@@ -21,3 +21,23 @@ alertmanagerPort: "80"
 grafanaUrl: grafana.example.com
 # External port of the Service, will redirect to 443 HTTPS if serviceSchema is set to https
 grafanaPort: "80"
+## OpenSearch
+opensearch:
+  persistence:
+    enabled: false
+  singleNode: true
+# As Secrets
+opensearch:
+    extraEnvs:
+      - name: OPENSEARCH_INITIAL_ADMIN_PASSWORD
+        value: <your_cool_password>
+      - name: DISABLE_INSTALL_DEMO_CONFIG
+        value: "false"
+      - name: DISABLE_SECURITY_PLUGIN
+        value: "false"
+opensearch-dashboards:
+    extraEnvs:
+        - name: DISABLE_INSTALL_DEMO_CONFIG
+          value: "true"
+        - name: DISABLE_SECURITY_PLUGIN
+          value: "true"

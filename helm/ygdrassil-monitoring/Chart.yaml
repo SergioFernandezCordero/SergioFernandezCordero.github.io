@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ygdrassil-monitoring
-version: 0.1.0
+version: 0.2.0
 description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus, Alertmanager, kube-static-metrics, Grafana)
 type: application
 keywords:
@@ -16,9 +16,15 @@ dependencies:
   - name: grafana
     version: "6.49.0"
     repository: "https://grafana.github.io/helm-charts"
+  - name: opensearch
+    version: "2.18.0"
+    repository: "https://opensearch-project.github.io/helm-charts"
+  - name: opensearch-dashboards
+    version: "2.16.1"
+    repository: "https://opensearch-project.github.io/helm-charts"
 icon: https://sergiofernandezcordero.github.io/ygdrassil/images/ygdrassil.png
 maintainers:
   - name: Sergio Fernández Cordero
     email: sergio@fernandezcordero.net
     url: https://sergio.fernandezcordero.net
-appVersion: 0.1.0
+appVersion: 0.2.0

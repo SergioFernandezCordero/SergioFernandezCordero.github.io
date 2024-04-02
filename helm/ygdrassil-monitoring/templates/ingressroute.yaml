@@ -112,3 +112,38 @@ spec:
     middlewares:
       - name: {{ .Values.appName }}-redirect-https
         namespace: kube-system
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-opensearch-dashboard-tls
+  namespace: monitoring
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`{{ .Values.opensearchDashboardUrl }}`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: opensearch-dashboards-web-lb
+      port: 80
+  tls:
+    certResolver: default
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: ingress-opensearch-dashboard
+  namespace: monitoring
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`{{ .Values.opensearchUrl }}`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: opensearch-dashboards-web-lb
+      port: 80
+    middlewares:
+      - name: {{ .Values.appName }}-redirect-https
+        namespace: kube-system
