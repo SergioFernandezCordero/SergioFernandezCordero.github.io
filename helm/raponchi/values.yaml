@@ -3,7 +3,7 @@
 appname: raponchi
 # Resources allocation for Raponchi container
 container:
-  version: 0.1.5
+  version: 0.2.0
   deployment:
     req:
       cpu: 100m
@@ -37,3 +37,10 @@ twitterConsumerKey: Your_Consumer_Key
 twitterConsumerSecret: Your_Consumer_Secret
 twitterAccessToken: Your_Access_Token
 twitterAccessSecret: Your_Access_Secret
+# Elasticsearch Logging parameters. Consider using helm-secrets plugin
+elkURL: elasticsearch.logging.svc.cluster.local
+alkPort: 9200
+elkUser: elkuser
+elkPass: elkpass
+elkTlsVerify: True
+elkIndex: raponchi-index

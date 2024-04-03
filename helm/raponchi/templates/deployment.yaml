@@ -63,6 +63,21 @@ spec:
               secretKeyRef:
                 name: {{ .Values.appname }}-access-secret
                 key: token
+          - name: ELK_URL
+            value: {{ .Values.elkURL }}
+          - name: ELK_PORT
+            value: {{ .Values.elkPort }}
+          - name: ELK_USER
+            value: {{ .Values.elkUser }}
+          - name: ELK_PASS
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Values.appname }}-elk-pass
+                key: token
+          - name: ELK_TLS_VERIFY
+            value: {{ .Values.elkTlsVerify }}
+          - name: ELK_INDEX
+            value: {{ .Values.elkIndex }}
           volumeMounts:
             - name: {{ .Values.appname }}-storage
               mountPath: /opt/raponchi/{{ .Values.frogPath }}
