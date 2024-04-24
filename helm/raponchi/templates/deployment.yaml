@@ -66,7 +66,7 @@ spec:
           - name: ELK_URL
             value: {{ .Values.elkURL }}
           - name: ELK_PORT
-            value: {{ .Values.elkPort }}
+            value: {{ .Values.elkPort | quote }}
           - name: ELK_USER
             value: {{ .Values.elkUser }}
           - name: ELK_PASS
@@ -75,7 +75,7 @@ spec:
                 name: {{ .Values.appname }}-elk-pass
                 key: token
           - name: ELK_TLS_VERIFY
-            value: {{ .Values.elkTlsVerify }}
+            value: {{ .Values.elkTlsVerify  | quote }}
           - name: ELK_INDEX
             value: {{ .Values.elkIndex }}
           volumeMounts:
