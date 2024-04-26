@@ -2,7 +2,7 @@
 Hash: SHA512
 
 apiVersion: v2
-appVersion: 0.2.0
+appVersion: 0.2.1
 description: Raponchi is a silly bot which posts in Twitter a photo of a frog with
   a random name. Why? Just for fun.
 home: https://sergiofernandezcordero.github.io/ygdrassil
@@ -25,20 +25,20 @@ version: 0.3.0
 
 ...
 files:
-  raponchi-0.3.0.tgz: sha256:a760a9573ae05cc55e3cab7768ddee5a035c19491e30c2a0594dd040f88cc849
+  raponchi-0.3.0.tgz: sha256:c04a07db6c0fcd5137dc72763da50ef4e8b76a02d784e2328103841c45d35577
 -----BEGIN PGP SIGNATURE-----
 
-wsFcBAEBCgAQBQJmKYhHCRC6QjaDxELY9gAAgmsQAFujpcLZ6Gi2WXOohwwQ9gS8
-aXIO1FLx7WkXjqr+jSV0WMgsiZsTeIAr1CVGF9tQ9P2HErawrPQ41jBXWeg1Gfqn
-0ZuXGsbKshXGapK2IUAzPVoEgkqW8DQOXOaSK1bzoyX5SeYRv+OPStzY7Ax3n0Vd
-ZlD9DklOavcdx84XTlui46moySVbY+z9+gJUejEm7nVzK7T2hSFMIA196c4HWirg
-WatZ6oU8n/PvfISHRQfRjjEavc59zRNsleDUsZ4aRbkAJCHR695mKZ5VSjuLh3AX
-3K2SzDajQKQ+7lOT27xxiO54yzSHB7A8cPN1vYYBMcfOquHy/VSbQoC/rCXBrwNA
-xF1exiD38HD6MbI+AX07G4lNm6Bc1GFppvUVwUDD//J6AqaCA9+4obSrvph+w2VU
-lQZ64ToXY79uVKV3Nkn7VKwzgc31IfIWJnyB/wpxSpKs8Jb5cwlS87aA1m7f+f9k
-9aIM3K4uqlYsJJybhSrtNlyttw67/SknSoKyafscUw1Nv/EfZ5ZnxlgWCaBXrUt3
-Ud4p9f8RKgSouH7FpvTymRWtMoJF+f6aSQK6yLyLLjZ2YpnjAgYlixJFe0bb0i8Q
-BqKsvixBzDBEtd7N70jmC9i6alvVrROOPha5bay0G+aBQJsKQ+UCD/Cc8PB2M4yF
-pB12m5TxC35BHvQhd4lv
-=YjiU
+wsFcBAEBCgAQBQJmK9k2CRC6QjaDxELY9gAAUYcQACi4FYeF6CE+uHNpw6KBAsHg
+v5aYxcM9OBU+KiqVmjzkaVJ+yJNfBVEcec+UuUMyGcud6rbmo79mECtGBwJcmXFB
+HIWuKwL4/oRpCJQS8jpyUy4jo0auvWpTFr/yKyG6aYaLKkbEIg7w0s6Rg/GnbzlX
+dXGv13UXlG9+8+MINy3BkhDso7tDHXrDoHltFZp/IH0xahK9deXXD72c+w8s81LD
+Wk+CIV8OPm10FI56ypbKX7UaEeihsxi+Yc4vd6QukiLxXqmKtPjlSl31J+4xePFQ
++hQuqrAowUn96G6vf3gWaHOsqBDUhfdPitCaN0C4LVgD3TtkOcI3iqIip51u3Wrf
+6QIPvzjA1x4ygyU3ZnaLKUSs8k+/tWtYgvqnDm2v/U69a0sMEkr/UwGvBhzAPcq7
+2puHHe2Qx414kRdIkbcl1jq5gAJUkWfep/TTnBsQ3Tv6BiykdZq4UVmy+IgJ8tm8
+r/6JUk9GlKWY7WT+pG+LDGq/EqQhqbBr+/s4caFHYxlR1634TqfskAdvbU4579um
+qvdG8EeHQLCwbh48Tk7GZ/iJTuxRdmTEWzloiWsIGma02biG54XgSXhblyyUq9eb
+twCF8au9nURXaOiSd4EQwgy9eVn30bAFILBqs+8akMV0zODmuq15DuIY0n4SOV8Z
+cXfTF2juDBvrEk9+gLCi
+=up3m
 -----END PGP SIGNATURE-----
