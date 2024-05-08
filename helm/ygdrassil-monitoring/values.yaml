@@ -24,7 +24,7 @@ grafanaPort: "80"
 ## OpenSearch
 opensearch:
   persistence:
-    enabled: false
+    enabled: true
   singleNode: true
 # As Secrets
 opensearch:
