@@ -10,3 +10,16 @@ spec:
     requests:
       storage: 1Gi
   storageClassName: local-storage
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: opensearch-cluster-master-opensearch-cluster-master-0
+  namespace: monitoring
+spec:
+  storageClassName: local-storage
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 6Gi

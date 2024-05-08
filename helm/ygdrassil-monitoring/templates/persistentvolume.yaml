@@ -11,3 +11,19 @@ spec:
   hostPath:
     path: /mnt/prometheus/
   storageClassName: local-storage
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: opensearch-cluster-master
+  namespace: monitoring
+  labels:
+    type: local
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /mnt/opensearch
