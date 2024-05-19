@@ -3,10 +3,10 @@ entries:
   aeneabot:
   - apiVersion: v2
     appVersion: 4.0.1
-    created: "2024-05-08T22:14:01.727693618Z"
+    created: "2024-05-19T21:35:52.729285437Z"
     description: AeneaBot is a Telegram Chat Bot which includes its own conversational
       AI base in Ollama
-    digest: c265e379b90381c156f09cf761bf06caa915626f877806a4f95f16d860eebcdc
+    digest: d1d71d187aa2ad2f76dec98a164da3cc676660001be04562f0614f8cf6f1c60c
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/aenea.png
     keywords:
@@ -29,10 +29,10 @@ entries:
   raponchi:
   - apiVersion: v2
     appVersion: 0.2.3
-    created: "2024-05-08T22:14:01.728022947Z"
+    created: "2024-05-19T21:35:52.729608902Z"
     description: Raponchi is a silly bot which posts in Twitter a photo of a frog
       with a random name. Why? Just for fun.
-    digest: 872b6cfb305330693f3b06bf60a964f0112d91a342a1c42c3a07e7aaa00e4cad
+    digest: 26cca3ffd9f0f91e7ed72f8f4dee31e285bc668aafb94e77538fb213439b189d
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/raponchi.png
     keywords:
@@ -54,8 +54,8 @@ entries:
     version: 0.3.1
   ygdrassil-monitoring:
   - apiVersion: v2
-    appVersion: 0.2.1
-    created: "2024-05-08T22:14:01.738851537Z"
+    appVersion: 0.2.2
+    created: "2024-05-19T21:35:52.73909867Z"
     dependencies:
     - name: prometheus
       repository: https://prometheus-community.github.io/helm-charts
@@ -65,13 +65,13 @@ entries:
       version: 6.49.0
     - name: opensearch
       repository: https://opensearch-project.github.io/helm-charts
-      version: 2.19.0
+      version: 2.20.0
     - name: opensearch-dashboards
       repository: https://opensearch-project.github.io/helm-charts
-      version: 2.17.0
+      version: 2.18.0
     description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus,
       Alertmanager, kube-static-metrics, Grafana)
-    digest: bc4e487c01e1afccf75d023710d6651981c590905596251f81f24bae81a83aff
+    digest: 5eb9cb6b5634ceefcceb95a3976476d4640785ee839deb76a60e77f0a09427b5
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/ygdrassil.png
     keywords:
@@ -86,6 +86,6 @@ entries:
     - https://sergiofernandezcordero.github.io/helm/ygdrassil-monitoring
     type: application
     urls:
-    - https://sergiofernandezcordero.github.io/ygdrassil/ygdrassil-monitoring-0.2.1.tgz
-    version: 0.2.1
-generated: "2024-05-08T22:14:01.727242439Z"
+    - https://sergiofernandezcordero.github.io/ygdrassil/ygdrassil-monitoring-0.2.2.tgz
+    version: 0.2.2
+generated: "2024-05-19T21:35:52.728807122Z"
