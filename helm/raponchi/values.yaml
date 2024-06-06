@@ -44,3 +44,5 @@ elkUser: elkuser
 elkPass: elkpass
 elkTlsVerify: True
 elkIndex: raponchi-index
+# Prometheus Exporter
+prometheusPort: 10090
