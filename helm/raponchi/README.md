@@ -38,6 +38,18 @@ You can send logs to ElasticSearch. Assumed TLS and Credentials is active, but T
 - ELK_TLS_VERIFY: Allows disabling TLS verification for ELK. Default to True
 - ELK_INDEX: Name of the index used to store logs. Defaults to raponchi-log
 
+#### Prometheus Exporter
+
+By default, Raponchi exposes port 10090 for prometheus metrics.
+The follwing metrics are implemented:
+
+- raponchi_total_frogs: Counter. Total frogs launched
+- raponchi_success_frogs: Counter. Successfully published frogs
+- raponchi_error_frogs: Counter. Unpublished frogs due to error
+- raponchi_latency: Histogram. Total time spent from invocation of scheduler until frog publishing
+- raponchi_bing_latency: Histogram. Time spent searching and downloading from Bing
+- raponchi_twitter_latency: Histogram. Time spent publishing frog on Twitter
+
 [You can install it using Helm from my repo](https://sergiofernandezcordero.github.io/ygdrassil/)
 
 Looking for the source code? Look [here](https://github.com/SergioFernandezCordero/raponchi).

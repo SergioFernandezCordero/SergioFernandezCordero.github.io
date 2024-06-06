@@ -3,7 +3,7 @@
 appname: raponchi
 # Resources allocation for Raponchi container
 container:
-  version: 0.2.3
+  version: 0.3.0
   deployment:
     req:
       cpu: 100m
@@ -44,3 +44,5 @@ elkUser: elkuser
 elkPass: elkpass
 elkTlsVerify: True
 elkIndex: raponchi-index
+# Prometheus Exporter
+prometheusPort: 10090
