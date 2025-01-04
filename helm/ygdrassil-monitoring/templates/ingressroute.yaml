@@ -1,4 +1,4 @@
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: ingress-prometheus-tls
@@ -13,10 +13,10 @@ spec:
     - name: prometheus-web-lb
       port: {{ .Values.prometheusPort }}
   tls:
-    certResolver: default
+    certResolver: letsencrypt
 
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: ingress-prometheus
@@ -35,9 +35,9 @@ spec:
       port: {{ .Values.prometheusPort }}
     middlewares:
       - name: {{ .Values.appName }}-redirect-https
-        namespace: kube-system
+        namespace: monitoring
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: ingress-alertmanager-tls
@@ -52,9 +52,9 @@ spec:
     - name: alertmanager-web-lb
       port: {{ .Values.alertmanagerPort }}
   tls:
-    certResolver: default
+    certResolver: letsencrypt
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: ingress-alertmanager
@@ -73,9 +73,9 @@ spec:
       port: {{ .Values.alertmanagerPort }}
     middlewares:
       - name: {{ .Values.appName }}-redirect-https
-        namespace: kube-system
+        namespace: monitoring
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: ingress-grafana-tls
@@ -90,9 +90,9 @@ spec:
     - name: grafana-web-lb
       port: {{ .Values.grafanaPort }}
   tls:
-    certResolver: default
+    certResolver: letsencrypt
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: ingress-grafana
@@ -111,9 +111,9 @@ spec:
       port: {{ .Values.grafanaPort }}
     middlewares:
       - name: {{ .Values.appName }}-redirect-https
-        namespace: kube-system
+        namespace: monitoring
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: ingress-opensearch-dashboard-tls
@@ -128,9 +128,9 @@ spec:
     - name: opensearch-dashboards-web-lb
       port: 80
   tls:
-    certResolver: default
+    certResolver: letsencrypt
 ---
-apiVersion: traefik.containo.us/v1alpha1
+apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
 metadata:
   name: ingress-opensearch-dashboard
@@ -142,8 +142,8 @@ spec:
   - match: Host(`{{ .Values.opensearchUrl }}`) && PathPrefix(`/`)
     kind: Rule
     services:
-    - name: opensearch-dashboards-web-lb
+    - name: {{ .Values.appName }}-redirect-https
       port: 80
     middlewares:
       - name: {{ .Values.appName }}-redirect-https
-        namespace: kube-system
+        namespace: monitoring
