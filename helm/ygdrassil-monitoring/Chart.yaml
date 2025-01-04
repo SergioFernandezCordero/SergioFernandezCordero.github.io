@@ -1,6 +1,6 @@
 apiVersion: v2
 name: ygdrassil-monitoring
-version: 0.2.2
+version: 0.3.0
 description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus, Alertmanager, kube-static-metrics, Grafana)
 type: application
 keywords:
@@ -27,4 +27,4 @@ maintainers:
   - name: Sergio Fernández Cordero
     email: sergio@fernandezcordero.net
     url: https://sergio.fernandezcordero.net
-appVersion: 0.2.2
+appVersion: 0.3.0
