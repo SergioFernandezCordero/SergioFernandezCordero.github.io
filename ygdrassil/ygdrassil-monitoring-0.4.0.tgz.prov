@@ -1,0 +1,54 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+apiVersion: v2
+appVersion: 0.4.0
+dependencies:
+- - name: prometheus
+  repository: https://prometheus-community.github.io/helm-charts
+  version: 27.3.0
+- - name: grafana
+  repository: https://grafana.github.io/helm-charts
+  version: 8.9.0
+- - name: opensearch
+  repository: https://opensearch-project.github.io/helm-charts
+  version: 2.30.0
+- - name: opensearch-dashboards
+  repository: https://opensearch-project.github.io/helm-charts
+  version: 2.26.0
+description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus,
+  Alertmanager, kube-static-metrics, Grafana)
+home: https://sergiofernandezcordero.github.io/ygdrassil
+icon: https://sergiofernandezcordero.github.io/ygdrassil/images/ygdrassil.png
+keywords:
+- - monitoring
+- - ygdrassil
+maintainers:
+- - email: sergio@fernandezcordero.net
+  name: Sergio Fernández Cordero
+  url: https://sergio.fernandezcordero.net
+name: ygdrassil-monitoring
+sources:
+- - https://sergiofernandezcordero.github.io/helm/ygdrassil-monitoring
+type: application
+version: 0.4.0
+
+...
+files:
+  ygdrassil-monitoring-0.4.0.tgz: sha256:894f4d31b81f937d64c95018f465071b723b8cb4b89d8f0d54b0a38289cd7de0
+-----BEGIN PGP SIGNATURE-----
+
+wsFcBAEBCgAQBQJnp65lCRC6QjaDxELY9gAAjoEQAAjzYv6un9BHZK8C/f3aFUgJ
+JSCRvhaVd4qAbvXetPMF7ctntqWOIj+IIUV/+iR/hMUo65rqD+1LZpTXtMLdrPwJ
+qniS6aO0rf6TLPfJy0LkKXpHE0E5GU+RF+eAjSe21SeSztgLKykEc0VwaK548XVJ
+6e9t2rerMwSANIDRDErrZMKyt+yBQl9l9yUQrnhCAj0XA+B1INDLtso3FLNR6sFW
+zMqMrkM+8wfZVvDQfC+FNfXpjNJbBahCsRpI6PKPRm27K2zysawy6euVEy5eGZpj
+8fseL7vM8Ij6mQ5LJ7MZXZ3T8MDpX3M9hQtN1byhwX/k/DQJ0PTgVXSiYM2oY4Wz
+wz1CEvIHvOWvbkrNGoD4jfRyz2ZC6PPbct0PkTxgj3rZKxDZgr7OSqHLN0Vp83T9
+BaLOsKIRb1jrzlP8a5ABTnqHM7mEdpaHpu+PB0kDZAwfV98sO8bX71U2p35meuaV
+h+tGpEUFRdddphwhiz7rVWMW4jEOQ1NtJH4ROzocQxcWi60DY5BDHBe12pwkv4Ii
+dGlo4fbIwGoIf/x4r6WkWksZupy8eixqhd4uFcI/10z7hYQpJEo1evwv4Rr7RHF6
+U/T/71Hj360m5m4E4BxlnDATRX8bmitCeb5VkZGQ+uqHILKtkZFoSMvZdZm6piAf
+/qXO4ssIvKrbafbOoopP
+=qYFN
+-----END PGP SIGNATURE-----
