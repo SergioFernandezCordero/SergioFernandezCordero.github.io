@@ -3,10 +3,10 @@ entries:
   aeneabot:
   - apiVersion: v2
     appVersion: 4.0.1
-    created: "2025-01-04T22:23:14.577333382Z"
+    created: "2025-02-08T19:20:05.624893601Z"
     description: AeneaBot is a Telegram Chat Bot which includes its own conversational
       AI base in Ollama
-    digest: 65168f7696a4aab76b5768c9263d61df3931b426e3e7781b724b4a15d41e40ca
+    digest: e706f8a2b39db7227512ac6da2fff98eca89793459ff2258cdc50cec044795eb
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/aenea.png
     keywords:
@@ -29,10 +29,10 @@ entries:
   raponchi:
   - apiVersion: v2
     appVersion: 0.3.0
-    created: "2025-01-04T22:23:14.577720964Z"
+    created: "2025-02-08T19:20:05.625291514Z"
     description: Raponchi is a silly bot which posts in Twitter a photo of a frog
       with a random name. Why? Just for fun.
-    digest: aff1538c71e79a08366d3eaf9ca8162cedf5f350fb792e9838617d00247c992a
+    digest: a0c2d772e6e137e34a48349058138b21aeb422e186641f27b6c03042b9a3aced
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/raponchi.png
     keywords:
@@ -54,24 +54,24 @@ entries:
     version: 0.4.0
   ygdrassil-monitoring:
   - apiVersion: v2
-    appVersion: 0.3.0
-    created: "2025-01-04T22:23:14.587505893Z"
+    appVersion: 0.4.0
+    created: "2025-02-08T19:20:05.637620976Z"
     dependencies:
     - name: prometheus
       repository: https://prometheus-community.github.io/helm-charts
-      version: 22.7.0
+      version: 27.3.0
     - name: grafana
       repository: https://grafana.github.io/helm-charts
-      version: 6.49.0
+      version: 8.9.0
     - name: opensearch
       repository: https://opensearch-project.github.io/helm-charts
-      version: 2.20.0
+      version: 2.30.0
     - name: opensearch-dashboards
       repository: https://opensearch-project.github.io/helm-charts
-      version: 2.18.0
+      version: 2.26.0
     description: Metapackage to deploy Ygdrassil Project monitoring stack (Prometheus,
       Alertmanager, kube-static-metrics, Grafana)
-    digest: 7add0ddfe053b8fd0bd6754f359d2d7c7e9cb51f0cc82e1c67159981e85e6b0f
+    digest: 894f4d31b81f937d64c95018f465071b723b8cb4b89d8f0d54b0a38289cd7de0
     home: https://sergiofernandezcordero.github.io/ygdrassil
     icon: https://sergiofernandezcordero.github.io/ygdrassil/images/ygdrassil.png
     keywords:
@@ -86,6 +86,6 @@ entries:
     - https://sergiofernandezcordero.github.io/helm/ygdrassil-monitoring
     type: application
     urls:
-    - https://sergiofernandezcordero.github.io/ygdrassil/ygdrassil-monitoring-0.3.0.tgz
-    version: 0.3.0
-generated: "2025-01-04T22:23:14.576861544Z"
+    - https://sergiofernandezcordero.github.io/ygdrassil/ygdrassil-monitoring-0.4.0.tgz
+    version: 0.4.0
+generated: "2025-02-08T19:20:05.624422471Z"
