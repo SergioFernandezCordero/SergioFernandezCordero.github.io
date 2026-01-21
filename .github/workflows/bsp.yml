@@ -29,7 +29,7 @@ jobs:
         run: curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
       - name: Install Helm Secrets Plugin
-        run: helm plugin install https://github.com/jkroepke/helm-secrets --version v4.5.1
+        run: helm plugin install https://github.com/jkroepke/helm-secrets --version v4.7.5
 
       - name: Lint Packages
         run: helm lint helm/*
