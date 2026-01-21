@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aeneaconfig
+data:
+  config.yml: |
+    token: {{ .Values.telegramToken | quote }}
+    botname: {{ .Values.botName | quote }}
+    authuser: {{ .Values.authUser | quote }}
+    loglevel: {{ .Values.logLevel| quote }}
+    ollama_url: {{ .Values.ollamaUrl | quote }}
+    ollama_model: {{ .Values.ollamaModel | quote }}
+    sqlitepath: {{ .Values.dbPath | quote }}
+    prometheus_enabled: {{ .Values.prometheusEnabled }}
+    prometheus_port: {{ .Values.prometheusPort }}
