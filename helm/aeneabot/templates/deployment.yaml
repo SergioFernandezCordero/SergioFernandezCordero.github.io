@@ -40,34 +40,17 @@ spec:
             limits:
               cpu: {{ .Values.bot.deployment.lim.cpu }}
               memory: {{ .Values.bot.deployment.lim.mem }}
-          env:
-          - name: BOTNAME
-            value: {{ .Values.botName }}
-          - name: AUTHUSER
-            value: {{ .Values.authUser }}
-          - name: LANG
-            value: {{ .Values.lang }}
-          - name: LOGLEVEL
-            value: {{ .Values.logLevel }}
-          - name: AENEADB
-            value: {{ .Values.dbPath }}
-          - name: TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: aeneatoken
-                key: token
-          - name: OLLAMA_URL
-            value: {{ .Values.ollamaUrl }}
-          - name: OLLAMA_MODEL
-            value: {{ .Values.ollamaModel }}
-          - name: PROMETHEUS_ENABLE
-            value: {{ .Values.prometheusEnabled | quote }}
-          - name: PROMETHEUS_PORT
-            value: {{ .Values.prometheusPort | quote }}
           volumeMounts:
             - name: {{ .Values.appname }}-storage
               mountPath: {{ .Values.dbPath }}
+            - name: aenea-config
+              readOnly: true
+              mountPath: "/opt/aenea"
       volumes:
         - name: {{ .Values.appname }}-storage
           persistentVolumeClaim:
             claimName: {{ .Values.appname }}-pvc
+
+        - name: aenea-config
+          secret:
+            secretName: aeneaconfig
