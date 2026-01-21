@@ -45,12 +45,11 @@ spec:
               mountPath: {{ .Values.dbPath }}
             - name: aenea-config
               readOnly: true
-              mountPath: "/opt/aenea"
+              mountPath: "/opt/aenea/config"
       volumes:
         - name: {{ .Values.appname }}-storage
           persistentVolumeClaim:
             claimName: {{ .Values.appname }}-pvc
-
         - name: aenea-config
-          secret:
-            secretName: aeneaconfig
+          configMap:
+            name: aeneaconfig

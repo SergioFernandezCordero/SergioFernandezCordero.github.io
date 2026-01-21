@@ -1,11 +1,10 @@
 apiVersion: v1
-kind: Secret
+kind: ConfigMap
 metadata:
   name: aeneaconfig
-type: Opaque
 data:
   config.yml: |
-    token: {{ .Values.telegramToken | b64enc | quote }}
+    token: {{ .Values.telegramToken | quote }}
     botname: {{ .Values.botName | quote }}
     authuser: {{ .Values.authUser | quote }}
     loglevel: {{ .Values.logLevel| quote }}
